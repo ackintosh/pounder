@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'pounder/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "pounder"
+  spec.name          = "sixpounder"
   spec.version       = Pounder::VERSION
   spec.authors       = ["Akihito Nakano"]
   spec.email         = ["sora.akatsuki@gmail.com"]
