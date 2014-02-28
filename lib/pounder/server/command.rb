@@ -1,3 +1,5 @@
+require 'date'
+
 module Pounder
   class Server
     module Command
@@ -37,6 +39,11 @@ module Pounder
         message = maildir[args.first.to_i]
         print_line "+OK"
         message.each_line do |line|
+          if line.match(/^Date: .*/) then
+            # Outputs a Date header of the time it was run.
+            print_line_message "Date: #{DateTime.now.httpdate}"
+            next
+          end
           print_line_message line
         end
 
