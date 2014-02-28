@@ -39,6 +39,10 @@ module Pounder
         message.each_line do |line|
           print_line_message line
         end
+
+        # To prevent dot to become a part of the body,
+        # and outputs a new line.
+        print_line ""
         print_line "."
       end
     end
