@@ -3,6 +3,12 @@
 Pounder is a POP server for operation verification for the system to
 parse the mail.
 
+master: [![Build
+Status](https://travis-ci.org/ackintosh/pounder.png?branch=master)](https://travis-ci.org/ackintosh/pounder)
+
+develop: [![Build
+Status](https://travis-ci.org/ackintosh/pounder.png?branch=develop)](https://travis-ci.org/ackintosh/pounder)
+
 ## Installation
 
     $ gem install pounder
