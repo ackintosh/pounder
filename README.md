@@ -18,7 +18,9 @@ Status](https://coveralls.io/repos/ackintosh/pounder/badge.png?branch=develop)](
 
 ## Installation
 
-    $ gem install pounder
+    $ gem install sixpounder
+
+*# Not a `pounder`*
 
 ## Usage
 
