@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["sora.akatsuki@gmail.com"]
   spec.description   = %q{POP server}
   spec.summary       = %q{POP server for operation verification}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/ackintosh/pounder"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
