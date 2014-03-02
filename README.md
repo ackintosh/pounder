@@ -3,10 +3,14 @@
 Pounder is a POP server for operation verification for the system to
 parse the mail.
 
+## Build & Dependency Status
+
+[![Gem Version](https://badge.fury.io/rb/sixpounder.png)](http://badge.fury.io/rb/sixpounder) [![Code
+Climate](https://codeclimate.com/github/ackintosh/pounder.png)](https://codeclimate.com/github/ackintosh/pounder)
+
 master: [![Build
 Status](https://travis-ci.org/ackintosh/pounder.png?branch=master)](https://travis-ci.org/ackintosh/pounder) [![Coverage
-Status](https://coveralls.io/repos/ackintosh/pounder/badge.png?branch=master)](https://coveralls.io/r/ackintosh/pounder?branch=master) [![Code
-Climate](https://codeclimate.com/github/ackintosh/pounder.png)](https://codeclimate.com/github/ackintosh/pounder)
+Status](https://coveralls.io/repos/ackintosh/pounder/badge.png?branch=master)](https://coveralls.io/r/ackintosh/pounder?branch=master)
 
 develop: [![Build
 Status](https://travis-ci.org/ackintosh/pounder.png?branch=develop)](https://travis-ci.org/ackintosh/pounder) [![Coverage
