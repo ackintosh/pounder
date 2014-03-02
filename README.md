@@ -5,7 +5,8 @@ parse the mail.
 
 master: [![Build
 Status](https://travis-ci.org/ackintosh/pounder.png?branch=master)](https://travis-ci.org/ackintosh/pounder) [![Coverage
-Status](https://coveralls.io/repos/ackintosh/pounder/badge.png?branch=master)](https://coveralls.io/r/ackintosh/pounder?branch=master)
+Status](https://coveralls.io/repos/ackintosh/pounder/badge.png?branch=master)](https://coveralls.io/r/ackintosh/pounder?branch=master) [![Code
+Climate](https://codeclimate.com/github/ackintosh/pounder.png)](https://codeclimate.com/github/ackintosh/pounder)
 
 develop: [![Build
 Status](https://travis-ci.org/ackintosh/pounder.png?branch=develop)](https://travis-ci.org/ackintosh/pounder) [![Coverage
