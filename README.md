@@ -4,10 +4,12 @@ Pounder is a POP server for operation verification for the system to
 parse the mail.
 
 master: [![Build
-Status](https://travis-ci.org/ackintosh/pounder.png?branch=master)](https://travis-ci.org/ackintosh/pounder)
+Status](https://travis-ci.org/ackintosh/pounder.png?branch=master)](https://travis-ci.org/ackintosh/pounder) [![Coverage
+Status](https://coveralls.io/repos/ackintosh/pounder/badge.png?branch=master)](https://coveralls.io/r/ackintosh/pounder?branch=master)
 
 develop: [![Build
-Status](https://travis-ci.org/ackintosh/pounder.png?branch=develop)](https://travis-ci.org/ackintosh/pounder)
+Status](https://travis-ci.org/ackintosh/pounder.png?branch=develop)](https://travis-ci.org/ackintosh/pounder) [![Coverage
+Status](https://coveralls.io/repos/ackintosh/pounder/badge.png?branch=develop)](https://coveralls.io/r/ackintosh/pounder?branch=develop)
 
 ## Installation
 
