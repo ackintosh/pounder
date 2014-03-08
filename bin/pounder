@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 require 'pounder'
-require "ackintosh/net/empty_port"
+require 'ackintosh/net/empty_port'
 port = $*[0] || Ackintosh::Net::EmptyPort.find
 
 Pounder::Server.invoke(port.to_i)
