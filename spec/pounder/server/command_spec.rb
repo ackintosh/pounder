@@ -13,7 +13,7 @@ describe Pounder::Server::Command do
       output = double("TCPSocket")
       output.should_receive(:print).with("+OK 100 10000\r\n")
       @server.instance_variable_set(:@output, output)
-      @server.cmd_STAT(@maildir, [])
+      @server.cmd_STAT(maildir: @maildir, args: [])
     end
   end
 end
