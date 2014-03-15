@@ -14,6 +14,8 @@ module Pounder
       puts "Maildir: #{maildir_path}"
       maildir = Maildir.new(maildir_path)
 
+      puts "From: #{options[:from_address]}" if options[:from_address]
+
       while true
         Thread.fork(server.accept) do |sock|
           p sock

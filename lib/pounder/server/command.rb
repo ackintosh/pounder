@@ -41,7 +41,10 @@ module Pounder
         message.each_line do |line|
           if line.match(/\ADate: .*/) then
             # Outputs a Date header of the time it was run.
-            print_line_message "Date: #{DateTime.now.httpdate}"
+            print_line "Date: #{DateTime.now.httpdate}"
+            next
+          elsif (params[:options][:from_address] && line.match(/\AFrom: .*/)) then
+            print_line "From: \"#{params[:options][:from_address]}\" <#{params[:options][:from_address]}>"
             next
           end
           print_line_message line
