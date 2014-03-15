@@ -2,27 +2,29 @@ module Pounder
   class Server
     include Command
 
-    def self.invoke(port)
-      new.listen(port)
+    def self.invoke(options)
+      new.listen(options)
     end
 
-    def listen(port)
-      server = TCPServer.new(port)
-      puts "#{self.class}##{__method__} port=#{port}"
+    def listen(options)
+      server = TCPServer.new(options[:port])
+      puts "#{self.class}##{__method__} port=#{options[:port]}"
 
       maildir_path = "#{Dir::pwd}/.pounder"
       puts "Maildir: #{maildir_path}"
       maildir = Maildir.new(maildir_path)
 
+      puts "From: #{options[:from_address]}" if options[:from_address]
+
       while true
         Thread.fork(server.accept) do |sock|
           p sock
-          service(sock, sock, maildir)
+          service(sock, sock, maildir, options)
         end
       end
     end
 
-    def service(input, output, maildir)
+    def service(input, output, maildir, options)
       @input  = input
       @output = output
       print_line "+OK pounder"
@@ -35,7 +37,7 @@ module Pounder
           next
         end
 
-        __send__(cmd_name, maildir, args)
+        __send__(cmd_name, maildir: maildir, args: args, options: options)
       end
     end
 

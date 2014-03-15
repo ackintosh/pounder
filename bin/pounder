@@ -1,7 +1,10 @@
 #!/usr/bin/env ruby
 
 require 'pounder'
-require "ackintosh/net/empty_port"
-port = $*[0] || Ackintosh::Net::EmptyPort.find
+require 'ackintosh/net/empty_port'
+require 'optparse'
 
-Pounder::Server.invoke(port.to_i)
+options = ARGV.getopts('p:f:')
+port = options['p'] || Ackintosh::Net::EmptyPort.find
+from_address = options['f'] || nil
+Pounder::Server.invoke(port: port.to_i, from_address: from_address)

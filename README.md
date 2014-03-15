@@ -33,12 +33,21 @@ operation verification.
 
 ### start
 
-    $ bundle exec pounder {port}
+    $ bundle exec pounder [port]
 
 If POP acceess to the host that started Pounder, you can get the mail
 data that is prepared in advance.
 
 It will not be deleted when you receive mail, you can repeat access.
+
+`[port]` is optional.  
+If it is omitted, a free port will be used automatically by [Ackintosh::Net::EmptyPort](https://github.com/ackintosh/ackintosh-net-empty_port).
+
+#### `-f` option
+
+    $ bundle exec pounder -f pounder@example.com
+
+Pounder can change 'From' header to specified email address.
 
 ## Contributing
 

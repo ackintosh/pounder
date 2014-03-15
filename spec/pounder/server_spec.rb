@@ -22,4 +22,24 @@ describe Pounder::Server do
       @server.print_line_message(".test")
     end
   end
+
+  describe "#read_cmd" do
+    context "@input.gets returns Command name only" do
+      it "returns Command name and empty array" do
+        input = double("TCPSocket")
+        input.should_receive(:gets).and_return("STAT")
+        @server.instance_variable_set(:@input, input)
+        expect(@server.read_cmd).to eq(["cmd_STAT", []])
+      end
+    end
+
+    context "@input.gets returns Command name and args" do
+      it "returns Command name and an array whose elements are the args" do
+        input = double("TCPSocket")
+        input.should_receive(:gets).and_return("RETR 2")
+        @server.instance_variable_set(:@input, input)
+        expect(@server.read_cmd).to eq(["cmd_RETR", ["2"]])
+      end
+    end
+  end
 end
